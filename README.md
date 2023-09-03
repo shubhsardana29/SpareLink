@@ -1,4 +1,4 @@
-![ Xiaomi Banner ](https://github.com/shubhsardana29/SpareLink/assets/52607235/d1b12a5b-a271-4841-a157-9401434f03c7)
+![ Xiaomi Banner ](https://github.com/shubhsardana29/SpareLink/assets/52607235/87ae1c4c-7908-48bc-aee8-5d6fdb52c1c5)
 
 ## Table of Contents
 
@@ -17,13 +17,13 @@
 ## Introduction
 
 <div align="center">
-  <img src="https://github.com/shubhsardana29/SpareLink/assets/52607235/32ea0fd8-2fe4-4a8d-929f-d8b8cf5cd3af" alt="SpareLink Logo" width=500 height = 500/>
+  <img src="https://github.com/shubhsardana29/SpareLink/assets/52607235/f3f5bfc8-e4ac-42d2-8f45-afd9a64c8502" alt="SpareLink Logo" width=500 height = 500/>
 </div>
 SpareLink is a comprehensive software solution designed to streamline spare part planning, visibility, and assignment for aftersales stakeholders. It enables efficient spare part management for service centers, planning teams, warehouse teams, and customer support, ultimately improving customer experience and reducing manual material allocation.
 
-[![Intro Video](link-to-your-intro-video-thumbnail)](https://github.com/shubhsardana29/SpareLink/assets/52607235/0fabd80b-dbf3-49cb-abee-2975b6aff1cd)
+[![Intro Video](link-to-your-intro-video-thumbnail)](https://github.com/shubhsardana29/SpareLink/assets/52607235/c3e9ab7f-74da-4235-986a-fc08c810583c)
 
-Watch our [Introductory Video](https://github.com/shubhsardana29/SpareLink/assets/52607235/0fabd80b-dbf3-49cb-abee-2975b6aff1cd) to see how SpareLink can transform your aftersales process.
+Watch our [Introductory Video](https://github.com/shubhsardana29/SpareLink/assets/52607235/c3e9ab7f-74da-4235-986a-fc08c810583c) to see how SpareLink can transform your aftersales process.
 
 ## Tech Stack
 
@@ -41,8 +41,7 @@ Watch our [Introductory Video](https://github.com/shubhsardana29/SpareLink/asset
 - **Yarn**
   
 ## Database ER Diagram
-
-![erdiagram](https://github.com/shubhsardana29/SpareLink/assets/52607235/2ce2f35a-3e45-43dd-a2cc-c736910448a4)
+![erdiagram](https://github.com/shubhsardana29/SpareLink/assets/52607235/e67a7e92-5c36-4ada-b712-96354cfc66a5)
 
 ## Prerequisites
 

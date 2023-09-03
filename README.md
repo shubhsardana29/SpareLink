@@ -13,6 +13,7 @@
 - [Frontend Setup](#frontend-setup)
   - [1. Go to the Frontend Directory](#1-go-to-the-frontend-directory)
   - [2. Build and Run](#2-build-and-run)
+- [Backend API Endpoints](#backend-api-endpoints) 
 
 ## Introduction
 
@@ -97,7 +98,7 @@ cd SpareLink_frontend
 
 ```bash
 yarn install
-yarn start
+yarn dev
 ```
 
 The frontend will run at `http://localhost:5173`.

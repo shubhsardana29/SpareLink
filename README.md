@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
 - [Database ER Diagram](#database-er-diagram)
 - [Prerequisites](#prerequisites)
 - [Backend Setup](#backend-setup)
@@ -24,6 +25,21 @@ SpareLink is a comprehensive software solution designed to streamline spare part
 
 Watch our [Introductory Video](https://github.com/shubhsardana29/SpareLink/assets/52607235/0fabd80b-dbf3-49cb-abee-2975b6aff1cd) to see how SpareLink can transform your aftersales process.
 
+## Tech Stack
+
+### Backend (Java Spring Boot)
+
+- **Java** 
+- **Spring Boot** 
+- **Maven** 
+- **MySQL** 
+
+### Frontend (React)
+
+- **React:** 
+- **Tailwind CSS** 
+- **Yarn**
+  
 ## Database ER Diagram
 
 ![erdiagram](https://github.com/shubhsardana29/SpareLink/assets/52607235/2ce2f35a-3e45-43dd-a2cc-c736910448a4)

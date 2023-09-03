@@ -1,0 +1,5 @@
+.vscode 
+
+# Ignore environment-specific properties files
+application-dev.properties
+application-prod.properties

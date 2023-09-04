@@ -5,18 +5,17 @@ function SignUp() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    roleId: 1, // Default role is Service Team
+    roleID: '1', // Default role is Service Team
   });
-
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: name === 'roleId' ? parseInt(value, 10) : value,
+      [name]: value,
     });
-    console.log(formData);
   };
 
   const handleSubmit = async (e) => {
@@ -33,20 +32,32 @@ function SignUp() {
 
       if (response.ok) {
         const responseData = await response.json();
-        console.log(responseData);
-        console.log(formData);
+        const { user } = responseData;
 
-        // After successful registration, you can navigate to the appropriate home page based on roleId
-        if (formData.role === '1') {
-          navigate('/service_team_homepage');
-        } else if (formData.role === '2') {
-          navigate('/planning_team_homepage');
-        } else if (formData.role === '3') {
-          navigate('/warehouse_team_homepage');
-        } else if (formData.role === '4') {
-          navigate('/customer_support_team_homepage');
-        } else {
-          // Handle other cases or show an error message
+        setFormData({
+          ...formData,
+          roleID: user.roleid,
+        });
+
+        // Set isAuthenticated to true after successful signup
+        setIsAuthenticated(true);
+
+        // Navigate based on user's roleId
+        switch (user.roleid) {
+          case '1':
+            navigate('/service_team_homepage');
+            break;
+          case '2':
+            navigate('/planning_team_homepage');
+            break;
+          case '3':
+            navigate('/warehouse_team_homepage');
+            break;
+          case '4':
+            navigate('/customer_support_team_homepage');
+            break;
+          default:
+            console.log('Unknown roleId:', user.roleid);
         }
       } else {
         console.error('Signup failed');
@@ -83,11 +94,11 @@ function SignUp() {
           />
         </div>
         <div>
-          <label htmlFor="roleId">Role</label>
+          <label htmlFor="roleID">Role</label>
           <select
-            id="roleId"
-            name="roleId"
-            value={formData.roleId}
+            id="roleID"
+            name="roleID"
+            value={formData.roleID}
             onChange={handleChange}
             required
           >

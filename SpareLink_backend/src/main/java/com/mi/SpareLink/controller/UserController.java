@@ -27,7 +27,9 @@ public class UserController {
         String hashedPassword = passwordEncoder.encode(User.getPassword());
         User.setPassword(hashedPassword);
         userRepository.save(User);
-        return ResponseEntity.status(HttpStatus.CREATED).body("User created with ID: " + User.getUserid());
+        String jsonResponse = "{\"message\":\"User created with ID: " + User.getUserid()
+                        + "\", \"user\":{\"username\":\"" + User.getUsername() + "\", \"roleid\":\"" + User.getRoleID() + "\"}}";
+        return ResponseEntity.status(HttpStatus.CREATED).body(jsonResponse);
     }
 
     @GetMapping("/{id}")

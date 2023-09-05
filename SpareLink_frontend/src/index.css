@@ -1,20 +1,11 @@
-/* src/index.css */
-@import './App.css';
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Light mode styles */
-.light {
-    background-color: white;
-    color: black;
-  }
+html,
+body,
+#root,
+.app {
+  height: 100%;
   
-  /* Dark mode styles */
-  .dark {
-    background-color: #2d3748;
-    color: white;
-  }
-  
-  /* Other styles... */
-  
+}

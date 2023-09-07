@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner/Spinner';
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
+import image3 from '../assets/image3.png';
 
 const API_URL = 'http://localhost:8080';
 
@@ -11,6 +14,24 @@ function Login() {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+
+    const imageUrls = [image1, image2 , image3];
+
+   
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    
+    const goToNextImage = () => {
+        const newIndex = (currentImageIndex + 1) % imageUrls.length;
+        setCurrentImageIndex(newIndex);
+    };
+
+    
+    useEffect(() => {
+        const intervalId = setInterval(goToNextImage, 5000); 
+
+        return () => clearInterval(intervalId);
+    }, [currentImageIndex]);
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
@@ -40,9 +61,13 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center h-full">
-            <div className="w-1/2 border-blue-500 flex justify-center items-center">
-                <h1 className="text-blue-500">Hello</h1>
+        <div className="flex justify-center items-center bg-black h-full">
+            <div className="w-1/2 flex justify-center items-center">
+                <img
+                    src={imageUrls[currentImageIndex]}
+                    alt="Carousel Images"
+                    className="w-full"
+                />
             </div>
             <div className="w-1/2 flex justify-center items-center">
                 <div className="max-w-md mx-auto mt-8 p-6">
@@ -62,7 +87,7 @@ function Login() {
                                 id="username"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-orange-300"
                                 required
                             />
                         </div>
@@ -78,14 +103,14 @@ function Login() {
                                 id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-orange-300"
                                 required
                             />
                         </div>
                         <div className="flex justify-center">
                             <button
                                 type="submit"
-                                className="bg-blue-500 text-white px-4 py-2 rounded-md"
+                                className="bg-orange-500 text-white px-4 py-2 rounded-md"
                                 disabled={loading}
                             >
                                 {loading ? <Spinner /> : 'Log In'}

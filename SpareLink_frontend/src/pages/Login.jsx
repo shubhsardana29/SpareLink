@@ -1,4 +1,4 @@
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner/Spinner';
@@ -15,20 +15,17 @@ function Login() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const imageUrls = [image1, image2 , image3];
+    const imageUrls = [image1, image2, image3];
 
-   
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    
     const goToNextImage = () => {
         const newIndex = (currentImageIndex + 1) % imageUrls.length;
         setCurrentImageIndex(newIndex);
     };
 
-    
     useEffect(() => {
-        const intervalId = setInterval(goToNextImage, 5000); 
+        const intervalId = setInterval(goToNextImage, 5000);
 
         return () => clearInterval(intervalId);
     }, [currentImageIndex]);
@@ -61,8 +58,8 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center bg-black h-full">
-            <div className="w-1/2 flex justify-center items-center">
+        <div className="flex justify-center items-cente h-full">
+            <div className="w-1/2 flex justify-center bg-black h-full items-center">
                 <img
                     src={imageUrls[currentImageIndex]}
                     alt="Carousel Images"

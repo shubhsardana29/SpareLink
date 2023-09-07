@@ -32,8 +32,8 @@ function Login() {
                 setError(response.data.message);
             }
         } catch (error) {
-            console.error('Error:', error);
-            setError('Network error. Please try again later.');
+            console.error('Error:', error.message);
+            setError('Incorrect username or password');
         } finally {
             setLoading(false);
         }
